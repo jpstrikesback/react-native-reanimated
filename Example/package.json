@@ -5,14 +5,15 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start --config ./metro.config.js",
     "test": "jest",
-    "postinstall": "npm link react-native-reanimated",
+    "postinstall": "cd .. && npm link && cd Example && npm link react-native-reanimated",
     "web": "expo start --web-only --web"
   },
   "dependencies": {
     "@react-navigation/web": "^1.0.0-alpha.9",
-    "react": "16.8.6",
+    "expo": "^35.0.0",
+    "react": "16.8.3",
     "react-dom": "^16.9.0",
-    "react-native": "0.59.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
     "react-native-gesture-handler": "1.4.1",
     "react-native-web": "^0.11.7",
     "react-navigation": "4.0.3",
@@ -23,7 +24,8 @@
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-preset-expo": "^6.0.0",
     "glob-to-regexp": "^0.4.0",
-    "jest": "23.6.0"
+    "jest": "23.6.0",
+    "jest-expo": "^35.0.0"
   },
   "jest": {
     "preset": "react-native"
